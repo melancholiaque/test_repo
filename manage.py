@@ -1,4 +1,4 @@
 from app import app
 from sys import argv
 
-app.run(port=argv[1])
+app.run(host='0.0.0.0', port=argv[1])
