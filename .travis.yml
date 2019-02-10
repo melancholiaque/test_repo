@@ -16,7 +16,7 @@ notifications:
     on_failure: change
 deploy:
   provider: heroku
-  api_key: "%token%"
+  api_key: "7855a3ce-b36d-460c-aa5c-562bd53b98fd"
   app:
     master: stella
     production: stella-dev
