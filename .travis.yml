@@ -19,3 +19,5 @@ deploy:
   api_key: "7855a3ce-b36d-460c-aa5c-562bd53b98fd"
   app:
     master: test-app655312
+  run: "FLASK_APP=app.py flask run"
+  
