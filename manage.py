@@ -1,3 +1,4 @@
 from app import app
+from sys import argv
 
-app.run()
+app.run(port=argv[1])
