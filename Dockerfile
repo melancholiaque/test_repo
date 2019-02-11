@@ -6,6 +6,7 @@ ENV PYTHON_VERSION "3.7.2"
 
 RUN pip3 install pipenv
 RUN python3.7 -V
+RUN ls
 RUN pipenv install
 
 EXPOSE 8000
