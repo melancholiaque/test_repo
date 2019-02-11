@@ -1,4 +1,5 @@
 from app import app
-from os import environ
+from os import environ, argv
 
-app.run(host='0.0.0.0', port=environ['PORT'])
+if argv[1] == 'run': 
+    app.run(host='0.0.0.0', port=environ['PORT'])

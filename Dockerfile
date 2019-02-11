@@ -9,4 +9,4 @@ RUN pipenv install
 RUN pipenv run pip freeze > requirements.txt
 RUN pip3 install -r requirements.txt
 
-CMD ["python", "manage.py", "run"]
+CMD python manage.py run
