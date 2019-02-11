@@ -9,7 +9,7 @@ install:
   - pipenv install --dev
   - pip install pytest-cov
 script:
-  - pytest ./tests
+  - pytest --cov=./tests
 notifications:
   email:
     on_success: never
