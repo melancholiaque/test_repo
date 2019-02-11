@@ -1,6 +1,7 @@
 FROM python:3.7.2
 
 WORKDIR /app
+COPY . /app
 
 RUN pip3 install pipenv
 RUN python3.7 -V
