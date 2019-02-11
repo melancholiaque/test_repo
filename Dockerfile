@@ -8,6 +8,7 @@ RUN pwd
 RUN ls /
 RUN ls /opt
 RUN pipenv install
+RUN ls
 
 EXPOSE 8000
 
