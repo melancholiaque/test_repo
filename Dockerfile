@@ -9,4 +9,4 @@ RUN pipenv graph
 
 EXPOSE 8000
 
-CMD ["python", "manage.py"]
+CMD ["python", "manage.pyw"]
