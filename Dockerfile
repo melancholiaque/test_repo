@@ -4,7 +4,7 @@ WORKDIR /test
 COPY . /stella
 
 RUN pip install pipenv && \
-    pipenv install --system --dev
+    pipenv install
 
 EXPOSE 8000
 
