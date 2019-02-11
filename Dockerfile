@@ -1,7 +1,7 @@
 FROM python:3.7.2
 
-RUN pip install pipenv
-RUN pipenv install --dev
+RUN pip3 install pipenv
+RUN pipenv install
 
 EXPOSE 8000
 
