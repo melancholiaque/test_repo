@@ -1,10 +1,7 @@
 FROM python:3.7.2
 
 RUN pip install pipenv && \
-    pipenv install
-
-WORKDIR /stella
-COPY . /stella
+    pipenv install --dev
 
 EXPOSE 8000
 
