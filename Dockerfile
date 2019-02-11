@@ -4,6 +4,7 @@ WORKDIR /app
 
 RUN pip3 install pipenv
 RUN python3.7 -V
+RUN pwd
 RUN ls
 RUN pipenv install
 
