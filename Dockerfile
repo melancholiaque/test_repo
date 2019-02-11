@@ -8,4 +8,4 @@ RUN pip3 install pipenv
 RUN pipenv install
 RUN pipenv graph
 
-CMD ["ls", "-la"]
+CMD ["pipenv", "run", "python", "manage.py"]
