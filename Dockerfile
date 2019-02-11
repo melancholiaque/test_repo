@@ -4,13 +4,8 @@ WORKDIR /app
 COPY . /app
 
 RUN pip3 install pipenv
-RUN python3.7 -V
-RUN pwd
-RUN ls /
-RUN ls /opt
 RUN pipenv install
-RUN ls
 
 EXPOSE 8000
 
-CMD ["python3.7", "/app/manage.py", "8000"]
+CMD ["pipenv", "run", "python", "/app/manage.py", "8000"]
