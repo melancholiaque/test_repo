@@ -3,8 +3,7 @@ FROM python:3.7.2
 WORKDIR /app
 COPY . /app
 
-RUN apt-get update
-RUN apt-get install tesseract-ocr
+RUN apt-get -y update
 
 RUN pip3 install --upgrade pip
 RUN pip3 install pipenv
