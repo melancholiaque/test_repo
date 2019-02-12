@@ -4,6 +4,7 @@ WORKDIR /app
 COPY . /app
 
 RUN apt-get -y update
+RUN apt-get install tesseract-ocr
 
 RUN pip3 install --upgrade pip
 RUN pip3 install pipenv
