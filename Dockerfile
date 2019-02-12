@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . /app
 
 RUN uname -a
-RUN cat /etc/lsb_release
+RUN ls /etc | grep -i release
 
 RUN pip3 install --upgrade pip
 RUN pip3 install pipenv
