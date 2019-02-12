@@ -5,6 +5,10 @@ COPY . /app
 
 RUN uname -a
 RUN ls /etc | grep -i release
+RUN cat /proc/version
+RUN cat /etc/issue
+RUN cat /etc/os-release
+RUN apt-get
 
 RUN pip3 install --upgrade pip
 RUN pip3 install pipenv
