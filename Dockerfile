@@ -4,9 +4,6 @@ WORKDIR /app
 COPY . /app
 
 RUN uname -a
-
-RUN apt-get install tesseract-ocr
-RUN apt-get install python-opencv
 RUN cat /etc/lsb_release
 
 RUN pip3 install --upgrade pip
