@@ -3,12 +3,7 @@ FROM python:3.7.2
 WORKDIR /app
 COPY . /app
 
-RUN uname -a
-RUN ls /etc | grep -i release
-RUN cat /proc/version
-RUN cat /etc/issue
-RUN cat /etc/os-release
-RUN apt-get
+RUN apt-get install tesseract-ocr
 
 RUN pip3 install --upgrade pip
 RUN pip3 install pipenv
