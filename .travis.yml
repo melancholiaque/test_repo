@@ -8,6 +8,7 @@ install:
   - pip install pipenv
   - pipenv install --dev
   - pip install pytest-cov
+  - echo $DROPBOX
 script:
   - pytest --cov=./tests
 notifications:
