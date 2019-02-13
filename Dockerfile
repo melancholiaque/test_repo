@@ -14,4 +14,4 @@ RUN pip3 install -r requirements.txt
 
 RUN pip install psycopg2-binary
 
-CMD python test.py
+CMD python manage.py run
