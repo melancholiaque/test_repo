@@ -4,3 +4,6 @@ def inc(x):
 
 def test_answer():
     assert inc(4) == 5
+
+import os
+os.environ['asdf']
