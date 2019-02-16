@@ -1,22 +1,22 @@
 language: python
+python: 3.7
+dist: xenial
+sudo: true
+install:
+- pip install pipenv
+- pipenv install --dev
+- pip install pytest-cov
 matrix:
   include:
-    - python: 3.7
-      dist: xenial
-      sudo: true
-install:
-  - pip install pipenv
-  - pipenv install --dev
-  - pip install pytest-cov
-  - echo $DROPBOX
-script:
-  - pytest --cov=./tests
+  - script: pytest --cov=./tests
 notifications:
   email:
     on_success: never
     on_failure: change
 deploy:
   provider: heroku
-  api_key: "7855a3ce-b36d-460c-aa5c-562bd53b98fd"
-  app: test-app655312
-  
+  on:
+    all_branches: true
+  app: test-app-dp-dp
+  api_key:
+    secure: Hc3cfr2hhI8CTwTHtWWLidKZYuN089JvRsnCBuXb5hFkqTUoVovEhKdUy6s2JgFZGUclGSEHRNs25Rxnp6ZSNXMNlwsGbOnnO+uOfpdPugdg1ELccwNdSwBJz/IwAWo0YlFNmW8mDkNMgg+3ceqF/fN1YkxiJ/fCVBzZvJU/QUVlJl8ll1xFIkR0ZDXDekiXKYkMZ1anhRdaGbxMT/LrC9aQjI4To4UzUmUNv4M1VF4mB7F4EmK3WFIUiZJH7IHjq5SkQ7Q/wAftkbvje30lqow42GuqXnI2BQY7tSpcsfd+j/4X45CqvleOKPsENUzMWsFuGJ/20UuI8JpuLL+bA5BJBaP7sbcukbMQB4VN8xZHNDt6M5ohCKpHt4a/AzBcJ7GQhDfn8tGzOhPiP/uOmvLQ5s2/ETKewAw/whSaFIkKDPqfn/iPxsNG7FRm1gtROiw4ZGVqsgFHf4bMaLFhpD4tDOLReVGOxivQP1t1y5y/mpBjDf6fjF42n+B1JNVpCvIS2ACqxtZ+oDSHPCnEfmmQcIITFQCfJov/bYWwxXR6YtKR1QgDcgTTYH+KO9xl4djn+fikF3HULbQjNbFBBekruNc256egw8lCKW9j4cMvRSUsYxuMgz02iEb3A+OnJe94S8BplCye/zjf+x1WvdYlPtFp4b8+Pb9S4D0a5Bc=
