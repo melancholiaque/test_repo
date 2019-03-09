@@ -12,7 +12,8 @@ notifications:
   email:
     on_success: never
     on_failure: change
-before_deploy: ./docker_push
 deploy:
-  provider: azure_web_apps
-  verbose: true
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
