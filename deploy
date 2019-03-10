@@ -1,3 +1,4 @@
 #!/bin/bash
 echo $SSH_PUBLIC_KEY > ./key
+chmod 600 ./key
 ssh -i ./key -o "StrictHostKeyChecking no" mel@stella-app.northeurope.cloudapp.azure.com < script.sh
