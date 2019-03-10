@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    build: .
+    image: melancholique/test
     env_file:
       ~/env.list
     depends_on:
