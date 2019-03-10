@@ -13,9 +13,9 @@ notifications:
     on_success: never
     on_failure: change
 before_install:
-  - openssl aes-256-cbc -K $encrypted_b23f8486d7f3_key -iv $encrypted_b23f8486d7f3_iv
+- openssl aes-256-cbc -K $encrypted_b23f8486d7f3_key -iv $encrypted_b23f8486d7f3_iv
   -in deploy_key.enc -out ./deploy_key -d
-  - bash docker_push
+- bash docker_push
 deploy:
   provider: script
   script: bash deploy
