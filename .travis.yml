@@ -12,8 +12,9 @@ notifications:
   email:
     on_success: never
     on_failure: change
+before_deploy: bash docker_push
 deploy:
   provider: script
-  script: bash docker_push
+  script: bash deploy
   on:
-    branch: master
+    branch: develop

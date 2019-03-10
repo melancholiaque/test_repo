@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $SSH_PUBLIC_KEY > ~/.ssh/authorized_keys
+ssh -o "StrictHostKeyChecking no" mel@stella-app.northeurope.cloudapp.azure.com < script.sh
