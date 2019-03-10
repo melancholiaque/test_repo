@@ -1,5 +1,6 @@
 #!/bin/bash
-echo $SSH_PUBLIC_KEY > ./key
-chmod 600 ./key
-ssh-add -K ./key
-ssh -i ./key -o "StrictHostKeyChecking no" mel@stella-app.northeurope.cloudapp.azure.com < script.sh
+eval "$(ssh-agent -s)"
+chmod 600 ./deploy_key
+echo -e "Host $SERVER_IP_ADDRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+ssh-add ./deploy_key
+ssh -i ./deploy_key mel@stella-app.northeurope.cloudapp.azure.com pwd
