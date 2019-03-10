@@ -1,1 +1,3 @@
-touch ~/deployed
+echo 'deploying'
+
+
